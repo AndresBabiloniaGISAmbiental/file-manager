@@ -14,6 +14,7 @@ while  True:
             print(len(content))
     except:
         print("Ya termino")
+        break
 
 print(content)
 
