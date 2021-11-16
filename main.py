@@ -18,7 +18,6 @@ while  True:
 
 print(content)
 
-
-#new_text = open('Z:\\PROGRAMACION\\python\\app_console_formating_test\\new.txt', 'w')
-#new_text.write(content)
-#new_tect.close()
+new_text = open('Z:\\PROGRAMACION\\python\\app_console_formating_test\\new.txt', 'w')
+new_text.write(content)
+new_text.close()
