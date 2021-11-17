@@ -1,3 +1,5 @@
+from os import replace
+
 file_text = open('Z:\\PROGRAMACION\\python\\app_console_formating_test\\texto.txt', 'r')
 content = file_text.readlines()
 file_text.close()
@@ -9,15 +11,24 @@ while  True:
         if content[i] != '\n' and i <= len(content):
             i = i-1
         else:
-            print("aqui hay salto te linea, se va a borrar esta linea", len(content))
             content.pop(i)
-            print(len(content))
     except:
         print("Ya termino")
         break
 
-print(content)
 
+print(content)
+j = 0
+text = ""
+while True:
+    try:
+        if len(content) >= j:
+            text = text + content[j].replace(' ', '_').append('.md')
+            j = j+1
+    except IndexError:
+        print("ya termino")
+        break
+print(text)
 new_text = open('Z:\\PROGRAMACION\\python\\app_console_formating_test\\new.txt', 'w')
-new_text.write(content)
+new_text.write(text)
 new_text.close()
