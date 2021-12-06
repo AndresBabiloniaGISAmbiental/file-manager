@@ -1,18 +1,14 @@
 # file-manager
 
-Aplicacion personal que toma el contenido en un block de notas, y lo convierte cada linea en un archivo markdown, esta echar para general capitulos de algun contenido que estes estudiando, donde colocas cada titulo de primer nivel en el archivo block de notas.
-
-El archivo block de nota debe estar en la misma carpeta que el archivo `main.py`
-
-El archivo de entrada lo cambias en `input_file_text = open(ruta+'texto.txt', 'r')` en el archivo `main.py`
+Tipo de Aplicacion: personal.
+Que hace: Toma el contenido en un block de notas, y convierte cada linea de texto en un archivo markdown.
 
 
-Definicion de repositorio
+Su uso principal es para generar capitulos de algun contenido que estes estudiando, donde colocas cada titulo de primer nivel en el archivo block de notas.
 
-https://dle.rae.es/repositorio
+O si deseas escribir documentación de algun repositorio.
 
-https://es.thefreedictionary.com/repositorio
 
-https://es.wikipedia.org/wiki/Repositorio_(contenido_digital)
+[instalación](docs/Installation.md)
 
-https://definicion.de/repositorio/
+[uso](docs/usage.md)
