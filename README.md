@@ -8,7 +8,7 @@ Su uso principal es para generar capitulos de algun contenido que estes estudian
 
 O si deseas escribir documentación de algun repositorio.
 
+## Contenido
+  * [instalación](docs/Installation.md)
 
-[instalación](docs/Installation.md)
-
-[uso](docs/usage.md)
+  * [uso](docs/usage.md)
