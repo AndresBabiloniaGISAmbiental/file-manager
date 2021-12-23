@@ -1,7 +1,9 @@
+import pathlib
 
+a = pathlib.Path(__file__).parent.absolute()
 # *TODO: Refactorizar. hacer interactivo la entrada del archivo con un input
 print("Iniciando programa de creación de archivos md, para escribir tus notas de algun tema")
-insert_path = input("Ingresa la ruta: ")
+insert_path = str(a)
 input_file_text = open(insert_path + '\\texto.txt', 'r')
 '''Esta parte tambien puede ser interactiva, el FICHERO txt'''
 
