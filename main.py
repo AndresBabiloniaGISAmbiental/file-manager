@@ -1,17 +1,15 @@
 
 # *TODO: Refactorizar. hacer interactivo la entrada del archivo con un input
-ruta = 'Z:\\PROGRAMACION\\python\\app_console_formating_test\\'
-'''De esta manera se estan escapando los carateres backsalh'''
-
-input_file_text = open(ruta+'texto.txt', 'r')
+print("Iniciando programa de creación de archivos md, para escribir tus notas de algun tema")
+insert_path = input("Ingresa la ruta: ")
+input_file_text = open(insert_path + '\\texto.txt', 'r')
 '''Esta parte tambien puede ser interactiva, el FICHERO txt'''
 
 content = input_file_text.readlines()
-'''Aqui se le  lo que tengo en el archivo en cada linea. en la vairbale content, que se convierte
-# En una lista donde cada indice tiene una linea de texto y/o un salto de linea.'''
+'''Aqui se lee  lo que tiene el archivo en cada linea, y se guarda en la varibale content, que se convierte En una lista o array donde cada indice tiene una linea de texto y/o un salto de linea.'''
+'''Abre el block de notas y guarda el contenido en la variable content, en memoria en pocas palabras, para luego en este bucle, infinito o indeterminado, al ingresar en cada linea'''
 input_file_text.close()
 
-'''Abre el block de notas y guarda el contenido en la variable content, en memoria en pocas palabras, para luego en este bucle, infinito, al ingresar en cada linea'''
 i = len(content)-1
 '''Establezco el contado, no se porque le quito 1, creo que es por ensayo y error..empiezo por la ultima linea'''
 while  True:
@@ -22,9 +20,8 @@ while  True:
             content.pop(i)
     except:
         break
-''' Borro el elemento en la posicion que me indica que esta  el caracter de salto de linea.
-#BUsco la coincidencia el salto de linea.
-# Limpieza del archivo de saltos de lineas, para dejar solo el texto util.'''
+''' Borro el elemento en la posicion que me indica que esta  el caracter de salto de linea. BUsco la coincidencia el salto de linea.
+limpieza del archivo de saltos de lineas, para dejar solo el texto util.'''
 
 #TODO Refactorizar el while por un for si se quiere.
 # j = 0
@@ -35,11 +32,9 @@ while  True:
 #         content.pop(j)
 #         j += 1
 #         print(len(content))
-'''Aqui se crena los archivos finalmente'''
+'''Aqui se crean los archivos finalmente'''
 i = 0
 for line in content:
-    open(ruta+ f'{i}_'+line[:len(line)-1].replace(" ", "_") + '.md','w') #crea cada
+    open(insert_path + f'\{i}_'+line[:len(line)-1].replace(" ", "_") + '.md','w') #crea cada
     i +=1
-
-
 
