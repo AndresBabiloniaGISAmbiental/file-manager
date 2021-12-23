@@ -1,5 +1,5 @@
 # Download
 
-`git clone `
+`git clone`
 
 Solo debe descargar el archivo `main.py`

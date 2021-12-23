@@ -1,11 +1,10 @@
 import pathlib
 
 a = pathlib.Path(__file__).parent.absolute()
-# *TODO: Refactorizar. hacer interactivo la entrada del archivo con un input
 print("Iniciando programa de creación de archivos md, para escribir tus notas de algun tema")
 insert_path = str(a)
 input_file_text = open(insert_path + '\\texto.txt', 'r')
-'''Esta parte tambien puede ser interactiva, el FICHERO txt'''
+# *TODO Esta parte tambien puede ser interactiva, el FICHERO txt'''
 
 content = input_file_text.readlines()
 '''Aqui se lee  lo que tiene el archivo en cada linea, y se guarda en la varibale content, que se convierte En una lista o array donde cada indice tiene una linea de texto y/o un salto de linea.'''
