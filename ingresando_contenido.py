@@ -9,7 +9,6 @@ ruta = pathlib.Path(__file__).parent.absolute()
 
 # Expresion regular
 patron = re.compile('^([01]?[0-9]|2[0-3]):[0-5][0-9]$')
-print(patron)
 # debo insertar una expresion regular para detectar si hay numeros y poderlo borrar
 
 # Ahora necesito leer la carpeta y los archivos para elejir a cual archivo le voy a meter los datos que tengo
@@ -21,19 +20,18 @@ print(patron)
 #    i += 1
 
 # Seleccione un archivo
-content_of_dir = os.scandir(ruta)
-
+content_of_dir = os.listdir(ruta)
 folder_of_dir = []
 files_markdown = []
+
+# ? Tendria que meter esto en una funcion?
 for item in content_of_dir:
     if os.path.isdir(os.path.join(ruta, item)):
         folder_of_dir.append(item)
     else:
         if os.path.isfile(os.path.join(ruta, item)) and item.endswith('.md'):
             files_markdown.append(item)
-        pass
 
-print(folder_of_dir)
-print(files_markdown)
+print(folder_of_dir, files_markdown)
 "Listo esta funcion funciona, seleccion los archivos markdown"
 
