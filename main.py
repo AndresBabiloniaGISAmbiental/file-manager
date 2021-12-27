@@ -45,8 +45,11 @@ limpieza del archivo de saltos de lineas, para dejar solo el texto util.'''
 
 i = 0
 for line in content:
-    name_file = str(line[:len(line)-1].replace(" ", "_"))
-    open(path+ f'\{name_of_folder}' + f'\{i}_'+ name_file + '.md','w')
-    i +=1
+    try:
+        name_file = str(line[:len(line)-1].replace(" ", "_"))
+        open(path+ f'\{name_of_folder}' + f'\{i}_'+ name_file + '.md','w')
+        i +=1
+    except:
+        print("Se produjo un error")
 '''Aqui se crean los archivos finalmente, enumerados desde el 0'''
 
