@@ -1,23 +1,9 @@
-import pathlib
-import os
+from managerdir import createDir, readDir
+from mangerfiles import createFiles
 
-from normalize import normalize
 
-# ? Debo meter todas estaos pasos logicos en funciones?, ya lo hice 😙
 # TODO: Me gustaria implementar una funcion que tenga un temporizador si llega a cero entonces crea una carpeta por defecto
 print("UI: Iniciando programa de creación automatica, automatizada de archivos '.md' , para escribir tus notas de algun tema")
-def takeDir():
-    dirpath = str(pathlib.Path(__file__).parent.absolute())
-    return dirpath
-
-def createFolder():
-    '''Se Crea el directorio donde se van a guardar los archivos .md'''
-    try:
-        name_of_folder = input("Ingrese el nombre de la carpeta que desea crear: ")
-        os.mkdir(f'{name_of_folder}')
-    except FileExistsError:
-        print("Carpeta ya existe, no se creo")
-    return name_of_folder
 
 # *TODO Esta parte tambien puede ser interactiva, el FICHERO txt
 def generateContent(dirpath):
@@ -44,20 +30,8 @@ def generateContent(dirpath):
     #TODO Refactorizar el while por un for si se quiere.
     return content
 
-def createFiles(folder):
-    '''creacion de archivos .md'''
-    i = 1
-    for line in content:
-        try:
-            s = line[:len(line)-1]
-            name_file = normalize(s)
-            print(name_file)
-            open(dirpath + f'\{folder}' + f'\{i}_'+ name_file + '.md','w')
-            i +=1
-        except OSError as err:
-            print("Se produjo un error:", err)
 
-dirpath = takeDir()
-folder = createFolder()
+dirpath = readDir()
+folder = createDir()
 content = generateContent(dirpath)
-createFiles(folder)
+createFiles(content, folder, dirpath)
