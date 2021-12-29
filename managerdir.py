@@ -4,7 +4,7 @@ import pathlib
 import os
 
 
-def readDir():
+def readpathDir():
     dirpath = str(pathlib.Path(__file__).parent.absolute())
     return dirpath
 

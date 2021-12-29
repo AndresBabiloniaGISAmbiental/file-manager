@@ -1,4 +1,4 @@
-from managerdir import createDir, readDir
+from managerdir import createDir, readpathDir
 from mangerfiles import createFiles
 
 
@@ -9,7 +9,6 @@ print("UI: Iniciando programa de creación automatica, automatizada de archivos 
 def generateContent(dirpath):
     open_file_text = open(dirpath + '\\texto.txt', 'r', encoding="utf-8")
     content = open_file_text.readlines()
-    print(content)
     open_file_text.close()
     '''Aqui se lee  lo que tiene el archivo en cada linea, y se guarda en la varibale content, que se convierte En una lista o array donde cada indice tiene una linea de texto y/o un salto de linea.'''
     '''Abre el block de notas y guarda el contenido en la variable content, en memoria en pocas palabras, para luego en este bucle, infinito o indeterminado, al ingresar en cada linea'''
@@ -31,7 +30,7 @@ def generateContent(dirpath):
     return content
 
 
-dirpath = readDir()
+dirpath = readpathDir()
 folder = createDir()
 content = generateContent(dirpath)
 createFiles(content, folder, dirpath)
