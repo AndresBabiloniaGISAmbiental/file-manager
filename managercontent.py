@@ -5,32 +5,28 @@ import re
 
 from managerdir import readpathDir
 
-ruta = readpathDir()
-
-def readContent():
-    input_file_text = open(str(ruta)+'\\formateando_texto.txt', 'r')
+def readContent(dirpath, file):
+    input_file_text = open(f'{dirpath}\{file}', 'r', encoding="utf-8")
     content = input_file_text.readlines()
     input_file_text.close()
     return content
 
-# Expresion regular
-patron = re.compile('^([01]?[0-9]|2[0-3]):[0-5][0-9]$')
-# debo insertar una expresion regular para detectar si hay numeros y poderlo borrar
-
-# Seleccione un archivo
-content_of_dir = os.listdir(ruta)
-
-# ? Tendria que meter esto en una funcion?
-def readFolderAndFiles():
+def readFolderAndFiles(dirpath):
+    "R. Folder and files in a specific path"
+    dir_readed = os.listdir(dirpath)
     folder_of_dir = []
     files_markdown = []
-    "Listo esta funcion funciona, selecciona los archivos markdown y los guarda en la variblaes, asi como tambienlos directorios"
-    for item in content_of_dir:
-        if os.path.isdir(os.path.join(ruta, item)):
+    for item in dir_readed:
+        if os.path.isdir(os.path.join(dirpath, item)):
             folder_of_dir.append(item)
         else:
-            if os.path.isfile(os.path.join(ruta, item)) and item.endswith('.md'):
+            if os.path.isfile(os.path.join(dirpath, item)) and item.endswith('.md'):
                 files_markdown.append(item)
     return folder_of_dir, files_markdown
 
-folders, files = readFolderAndFiles()
+
+
+
+# Expresion regular
+patron = re.compile('^([01]?[0-9]|2[0-3]):[0-5][0-9]$')
+# debo insertar una expresion regular para detectar si hay numeros y poderlo borrar

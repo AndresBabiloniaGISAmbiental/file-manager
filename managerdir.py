@@ -2,37 +2,29 @@ import shutil
 import pathlib
 import os
 
-def createDir():
+def createDir(namedir):
     '''C. Se Crea el directorio donde se van a guardar los archivos .md'''
     try:
-        name_of_folder = input(
-            "Ingrese el nombre de la carpeta que desea crear: ")
-        os.mkdir(f'{name_of_folder}')
+        os.mkdir(f'{namedir}')
     except FileExistsError:
-        print("Carpeta ya existe, no se creo")
-    return name_of_folder
+        print("Carpeta con ese nombre ya existe, no se creo, intente con otro nombre")
+    return namedir
 
 def readpathDir():
-    """R. """
+    """R. Read de curretn dir of this script"""
     dirpath = str(pathlib.Path(__file__).parent.absolute())
     return dirpath
 
 
-def updateDir():
+def updateDir(namedir):
     """U. Rename a Dir"""
+    (namedir)
     pass
 
-def deleteDir(dir):
-    """D. """
-    dirPath = dir
+def deleteDir(namedir):
+    """D. Borra todo un directorio con el contenido incluido"""
     try:
-        shutil.rmtree(dirPath)
+        shutil.rmtree(namedir)
     except OSError as e:
-        print(f"Error:{ e.strerror}")
+        print(f"Error:{ e.strerror}, otergue permisos necesarios o el directorio no")
 
-
-deleteDir('aa')
-deleteDir('bb')
-deleteDir('cc')
-deleteDir('dd')
-deleteDir('ff')
