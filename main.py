@@ -1,7 +1,7 @@
 from managercontent import readContent, readFolderAndFiles
 from managerdir import createDir, readpathDir
 from mangerfiles import createFiles
-from normalize import cleanContent
+from algorithms.normalize import cleanContent
 
 print("UI: Iniciando programa de creación automatica, automatizada de archivos '.md' , para escribir tus notas de algun tema")
 

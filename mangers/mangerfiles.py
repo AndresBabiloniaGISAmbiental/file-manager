@@ -1,4 +1,4 @@
-from normalize import normalize
+from algorithms.normalize import normalize
 
 def createFiles(content, folderCustom, dirpath, ext):
     '''C. creacion de archivos de cualquier formato'''

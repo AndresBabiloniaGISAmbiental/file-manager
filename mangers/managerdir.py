@@ -11,7 +11,7 @@ def createDir(namedir):
     return namedir
 
 def readpathDir():
-    """R. Read de curretn dir of this script"""
+    """R. Read de current dir of this script"""
     dirpath = str(pathlib.Path(__file__).parent.absolute())
     return dirpath
 
@@ -27,4 +27,6 @@ def deleteDir(namedir):
         shutil.rmtree(namedir)
     except OSError as e:
         print(f"Error:{ e.strerror}, otergue permisos necesarios o el directorio no")
+def searchDir():
+    pass
 

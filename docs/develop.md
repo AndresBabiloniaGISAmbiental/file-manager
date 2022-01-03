@@ -18,7 +18,7 @@ Cambiar los caracteres raro a tildes si es necesarios.
 
 ### OBJETIVO GENERAL
 
-Realizar un CRUD del contenido, en el archivo markdown de eleccion o preferencia.
+Realizar un CRUDS del contenido, en el archivo markdown de eleccion o preferencia.
 
 ### OBJETIVO ESPECIFICO
 
@@ -41,15 +41,20 @@ Realizar un CRUD del contenido, en el archivo markdown de eleccion o preferencia
     * Seleccionar el archivo md de preferencia.
     * Insertarle al informacion nueva que quiero o borrarla.
 
-4 🗑️ DELETE:
-    *Eliminiar el contenido que inserte.
+4. 🗑️ DELETE:
+    * Eliminiar el contenido que inserte.
     * PASS
 
-# COMENTARIOS RANDOM
+5. 🔎 SEARCH:
+   * Buscar contenido, segun algun criterio, sera que este se asemeja al read?
+   * Aqui hay verbos tambien de apoyo a estas actividades como, busqueda y ordenamiento
+
+# COMENTARIOS DEL CODIGÓ (DESORDENADAMENTE)
 
 Listo esta funcion funciona, LEES LOS NOMRBES los archivos y los guarda en la variblaes, asi como tambienlos directorios
-
 
 readconteny():
 """Lee  el archivo y guarda el contenido del archivo en la varibale content, que se convierte En una lista o array donde cada indice tiene una linea de texto y/o un salto de linea"""
 '''Abre el block de notas y guarda el contenido en la variable content, en memoria en pocas palabras, para luego en este bucle, infinito o indeterminado, al ingresar en cada linea'''
+
+# COMENTARIOS APARTEA
