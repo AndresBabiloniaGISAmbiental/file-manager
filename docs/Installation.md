@@ -8,4 +8,3 @@ Si conoces del area de la programación y tambien desaeas contribuir al desarrol
 https `git clon`
 
 ssh `git@github.com/file`
-

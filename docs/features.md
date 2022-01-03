@@ -8,4 +8,4 @@ Se  puede usar para:
 
 * Generar capitulos de algun contenido que estes estudiando, donde colocas cada titulo de primer nivel en el archivo block de notas.
 
-* Escribir documentación de algun repositorio
+* Escribir documentación de algun repositorio.
