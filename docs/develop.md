@@ -23,31 +23,31 @@ Realizar un CRUDS del contenido, en el archivo markdown de eleccion o preferenci
 ### OBJETIVO ESPECIFICO
 
 1. CREATE: Introduccion el contenido con formato markdown en un arhcivo markdown proveniente de un block de notas
-   * 🗒️ Leer todos los archivos (`.md`) generados, anteriormente, esto los puedo y almacenarlo en el codigo en alguna variables es decir en memoria ram, o tamien puedo guardarlo en algun block de nota, o archivo serializado, o incluso en una base de datos, como SQL, ¿sera que tengo que darle un ID o un identificador, en fin despues reviso que es mejor?.
-   * 👉 Elegir uno de los archivos (`.md`) a modificar, (tal vez por su ID, debo darle un ID?)
-   * Leer el contenido en el archivo.
-   * Eliminar el contenido no deseado, no compatible.
-   * Crear Agregar o formatear el contenido compatible con markdown.
+   * 🗒️ [] Leer todos los archivos (`.md`) generados, anteriormente, esto los puedo y almacenarlo en el codigo en alguna variables es decir en memoria ram, o tamien puedo guardarlo en algun block de nota, o archivo serializado, o incluso en una base de datos, como SQL, ¿sera que tengo que darle un ID o un identificador, en fin despues reviso que es mejor?.
+   * 👉 [] Elegir uno de los archivos (`.md`) a modificar, (tal vez por su ID, debo darle un ID?)
+   * [] Leer el contenido en el archivo.
+   * [] Eliminar el contenido no deseado, no compatible.
+   * [] Crear Agregar o formatear el contenido compatible con markdown.
      Ejemplo: `# Introduccion`, `# Primeros pasos`
-   * 📋 Insertar el contenido que quiero en el archivo.
+   * 📋 [] Insertar el contenido que quiero en el archivo.
 
 2. 👀 READ:
-   * Ver o Leer todos los archivos (`.md`) disponibles.
-   * Seleccionar el archivo md de preferencia.
-   * Ver el contenido que inserte.
+   * [] Ver o Leer todos los archivos (`.md`) disponibles.
+   * [] Seleccionar el archivo md de preferencia.
+   * [] Ver el contenido que inserte.
 
 3. UPDATE:
-    * 🗒️ Ver o Leer todos los archivos (`.md`) disponibles.
-    * Seleccionar el archivo md de preferencia.
-    * Insertarle al informacion nueva que quiero o borrarla.
+    * 🗒️ [] Ver o Leer todos los archivos (`.md`) disponibles.
+    * [] Seleccionar el archivo md de preferencia.
+    * [] Insertarle al informacion nueva que quiero o borrarla.
 
 4. 🗑️ DELETE:
-    * Eliminiar el contenido que inserte.
-    * PASS
+    * [] Eliminiar el contenido que inserte.
+    * [] PASS
 
 5. 🔎 SEARCH:
-   * Buscar contenido, segun algun criterio, sera que este se asemeja al read?
-   * Aqui hay verbos tambien de apoyo a estas actividades como, busqueda y ordenamiento
+   * [] Buscar contenido, segun algun criterio, sera que este se asemeja al read?
+   * [] Aqui hay verbos tambien de apoyo a estas actividades como, busqueda y ordenamiento
 
 # COMENTARIOS DEL CODIGÓ (DESORDENADAMENTE)
 
