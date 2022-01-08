@@ -11,11 +11,12 @@ def createDir(namedir):
     return namedir
 
 def readpathDir():
-    """R. Read de current dir of this script"""
-    dirpath = str(pathlib.Path(__file__).parent.absolute())
+    """R. Read de current dir of this script""" # No me sirve, esta mal
+    # dirpath = str(pathlib.Path(__file__).parent.absolute())
+    dirpath = ""
     return dirpath
 
-
+# TODO: Finishi this functions
 def updateDir(namedir):
     """U. Rename a Dir"""
     (namedir)
@@ -26,7 +27,13 @@ def deleteDir(namedir):
     try:
         shutil.rmtree(namedir)
     except OSError as e:
-        print(f"Error:{ e.strerror}, otergue permisos necesarios o el directorio no")
-def searchDir():
+        print(f"Error:{ e.strerror}, otergue permisos necesarios o el directorio no existe")
+
+# TODO: Finishi this functions
+def searchAllDir():
+    pass
+
+# TODO: Finishi this functions
+def searchSingleDir():
     pass
 
