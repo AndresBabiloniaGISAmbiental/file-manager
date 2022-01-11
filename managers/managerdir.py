@@ -11,10 +11,32 @@ def createDir(namedir):
     return namedir
 
 def readpathDir():
-    """R. Read de current dir of this script""" # No me sirve, esta mal
-    # dirpath = str(pathlib.Path(__file__).parent.absolute())
-    dirpath = ""
+    # ! Error de logica porque lee el directorio actual, pero no sirve asi
+    # * La idea es que lea el directorio de forma dinamica
+    """R. Read the current dir where is this script that where"""
+    dirpath = str(pathlib.Path(__file__).parent.absolute())
+    # dirpath = ""
     return dirpath
+
+def readDir():
+    " Lee el directorio sin contar la carpeta en la que se ejecuta este script"
+    current_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    return current_dir
+
+def readFolders(dirpath):
+    "R. Folders in a specific path"
+    dir_readed = os.listdir(dirpath)
+    folder_of_dir = []
+    for item in dir_readed:
+        if os.path.isdir(os.path.join(dirpath, item)):
+            folder_of_dir.append(item)
+    return folder_of_dir
+
+def readCurrentDir():
+    a = readpathDir()
+    current_dir = a[len(readDir()):]
+    print(current_dir)
+    return current_dir
 
 # TODO: Finishi this functions
 def updateDir(namedir):
@@ -37,3 +59,5 @@ def searchAllDir():
 def searchSingleDir():
     pass
 
+
+a = readCurrentDir()
